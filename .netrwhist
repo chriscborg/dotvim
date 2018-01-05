@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/nicolegrech/Documents/Developer/vookd/public'
+let g:netrw_dirhist_2='/Users/nicolegrech/Documents/Developer/vookd/public/app'
+let g:netrw_dirhist_3='/Users/nicolegrech/Documents/Developer/vookd/public/app/users'
+let g:netrw_dirhist_4='/Users/nicolegrech/Documents/Developer/vookd/public/app/users/service'
+let g:netrw_dirhist_5='/Users/nicolegrech/Documents/Developer/vookd/public/app/users'
+let g:netrw_dirhist_6='/Users/nicolegrech/Documents/Developer/vookd/public/app/users/templates'
+let g:netrw_dirhist_7='/Users/nicolegrech/Documents/Developer/vookd/public/app/users/templates/pages'
