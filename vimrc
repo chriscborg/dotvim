@@ -146,7 +146,6 @@ set expandtab
 "set shiftwidth=4
 "set tabstop=4
  
- 
 "------------------------------------------------------------
 " Mappings {{{1
 "
@@ -167,6 +166,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'francoiscabrol/ranger.vim'
 
 " Initialize plugin system
 call plug#end()
