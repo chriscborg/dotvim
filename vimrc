@@ -18,6 +18,8 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
  
+execute pathogen#infect()
+
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
@@ -159,6 +161,12 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
@@ -170,8 +178,6 @@ Plug 'francoiscabrol/ranger.vim'
 
 " Initialize plugin system
 call plug#end()
-
-execute pathogen#infect()
 
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
